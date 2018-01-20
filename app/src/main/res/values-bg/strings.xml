@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Лаб1</string>
+    <string name="hello_message">Здравей, свят!</string>
+    <string name="ButtonText">Аз съм бутон</string>
+
+</resources>
