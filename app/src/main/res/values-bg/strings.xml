@@ -3,5 +3,12 @@
     <string name="app_name">Лаб1</string>
     <string name="hello_message">Здравей, свят!</string>
     <string name="ButtonText">Аз съм бутон</string>
+    <string name="login"> Вписване</string>
+    <string name="Enter_loginName">Потребителско име</string>
+    <string name="password">Парола</string>
+    <string name="Radio_Button">Радио Бутон</string>
+    <string name="CheckBox">Отметка</string>
+    <string name="Switch">Какво прави този бутон?</string>
+    <string name="flagDescription">Знаме</string>
 
 </resources>
