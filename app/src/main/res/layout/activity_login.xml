@@ -8,6 +8,8 @@
     tools:context="android.labs.LoginActivity">
 
 
+
+
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
@@ -19,7 +21,7 @@
         android:id="@+id/plain_text_input1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/Enter_loginName"
+        android:hint="Email"
         android:inputType="textEmailAddress" />
 
     <TextView
@@ -43,6 +45,12 @@
         android:src="@drawable/flag"
         android:contentDescription="@string/flagDescription"
         />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGIN" />
 
 
 </LinearLayout>
