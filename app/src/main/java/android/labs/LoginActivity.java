@@ -10,8 +10,9 @@ import android.widget.EditText;
 
 public class LoginActivity extends Activity {
     protected static final String ACTIVITY_NAME = "LoginActivity";
-    Button button = (Button) findViewById(R.id.button2);
-    EditText editText = (EditText) findViewById(R.id.plain_text_input1)
+    Button button2;
+    EditText email;
+    SharedPreferences sharedP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,13 +20,18 @@ public class LoginActivity extends Activity {
 
         setContentView(R.layout.activity_login);
         Log.i(ACTIVITY_NAME,"onCreate()");
-        final SharedPreferences sharedP = getSharedPreferences("LogFile",MODE_PRIVATE);
-        sharedP.edit().putString("DefaultMail", "email@domain.com");
 
-        button.setOnClickListener(new View.OnClickListener() {
+        email = findViewById (R.id.email);
+        button2 = findViewById(R.id.button2);
+        sharedP = getSharedPreferences("LogFile",MODE_PRIVATE);
+
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editText.setText(sharedP.getString("DefaultMail", "email@domain.com"));
+
+                email.setText(sharedP.getString("DefaultMail", "email@domain.com"));
+                sharedP.edit().putString("DefaultMail", "email@domain.com");
+                sharedP.edit().commit();
             }
         });
     }
