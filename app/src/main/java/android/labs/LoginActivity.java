@@ -7,9 +7,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.content.Intent;
 
 public class LoginActivity extends Activity {
     protected static final String ACTIVITY_NAME = "LoginActivity";
+    protected static final String MAIL = "DefaultMail";
     Button button2;
     EditText email;
     SharedPreferences sharedP;
@@ -24,17 +26,18 @@ public class LoginActivity extends Activity {
         email = findViewById (R.id.email);
         button2 = findViewById(R.id.button2);
         sharedP = getSharedPreferences("LogFile",MODE_PRIVATE);
+        email.setText(sharedP.getString(MAIL, "email@domain.com"));
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                email.setText(sharedP.getString("DefaultMail", "email@domain.com"));
-                sharedP.edit().putString("DefaultMail", "email@domain.com");
-                sharedP.edit().commit();
+                saveEmail();
+                Intent intent = new Intent(LoginActivity.this, StartActivity.class);
+                startActivity(intent);
             }
         });
     }
+
     @Override
     public void onResume(){
         super.onResume();
@@ -59,5 +62,13 @@ public class LoginActivity extends Activity {
     public void onDestroy() {
         super.onDestroy();
         Log.i(ACTIVITY_NAME, "onDestroy()");
+    }
+
+    private void saveEmail(){
+        Log.i(ACTIVITY_NAME,"saveEmail");
+        String savedUserName = email.getText().toString();
+
+        sharedP.edit().putString(MAIL, savedUserName);
+        sharedP.edit().commit();
     }
 }

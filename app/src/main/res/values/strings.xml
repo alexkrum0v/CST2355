@@ -9,6 +9,10 @@
     <string name="CheckBox">Check Box</string>
     <string name="Switch">What does this button do?</string>
     <string name="flagDescription">flag</string>
-
+    <string name ="dialogMessage">Press OK if you are done</string>
+    <string name = "dialogTitle">Exit application. Are you sure?</string>
+    <string name = "ok">OK!</string>
+    <string name = "cancel">Cancel</string>
+    <string name="response">My information to share</string>
 
 </resources>

@@ -10,5 +10,11 @@
     <string name="CheckBox">Отметка</string>
     <string name="Switch">Какво прави този бутон?</string>
     <string name="flagDescription">Знаме</string>
+    <string name ="dialogMessage">Натиснете ОК, ако сте приключили</string>
+    <string name = "dialogTitle">Изход от приложението. Сигурни ли сте?</string>
+    <string name = "ok">OK!</string>
+    <string name = "cancel">Отмени</string>
+    <string name="response">Моята информация за споделяне</string>
+
 
 </resources>
