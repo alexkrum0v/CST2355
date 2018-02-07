@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
@@ -19,8 +20,8 @@ import android.widget.Toast;
 public class ListItemsActivity extends Activity {
     protected static final String ACTIVITY_NAME = "LoginActivity";
     private static  final int captureRequested = 1;
-    ImageView imageViewButton;
     Switch switchToggle;
+    ImageButton imageViewButton;
     CheckBox checkBox;
 
     @Override
@@ -28,7 +29,7 @@ public class ListItemsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Log.i(ACTIVITY_NAME,"onCreate()");
-        imageViewButton =  (ImageButton) findViewById(R.id.imageButton);
+        imageViewButton =  findViewById(R.id.imageButton);
         switchToggle = findViewById(R.id.switch1);
         checkBox = findViewById(R.id.Checkbox);
 

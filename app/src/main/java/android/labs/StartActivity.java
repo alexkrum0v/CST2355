@@ -14,13 +14,13 @@ public class StartActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_start);
         Log.i(ACTIVITY_NAME,"onCreate()");
-        Button startActivityButton = findViewById(R.id.button);
+        Button startActivityButton = findViewById(R.id.btnStartActivity);
 
         startActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Intent startIntent = new Intent(StartActivity.this, ListItemsActivity.class);
                 startActivityForResult(startIntent, 50);
             }

@@ -12,7 +12,7 @@ import android.content.Intent;
 public class LoginActivity extends Activity {
     protected static final String ACTIVITY_NAME = "LoginActivity";
     protected static final String MAIL = "DefaultMail";
-    Button button2;
+    Button btnLogin;
     EditText email;
     SharedPreferences sharedP;
 
@@ -24,11 +24,13 @@ public class LoginActivity extends Activity {
         Log.i(ACTIVITY_NAME,"onCreate()");
 
         email = findViewById (R.id.email);
-        button2 = findViewById(R.id.button2);
+        btnLogin = findViewById(R.id.btnLogin);
+
         sharedP = getSharedPreferences("LogFile",MODE_PRIVATE);
+
         email.setText(sharedP.getString(MAIL, "email@domain.com"));
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 saveEmail();
