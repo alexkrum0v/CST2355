@@ -18,27 +18,28 @@ import android.widget.Toast;
 
 
 public class ListItemsActivity extends Activity {
-    protected static final String ACTIVITY_NAME = "LoginActivity";
-    private static  final int captureRequested = 1;
+    protected static final String ACTIVITY_NAME = "ListItemsActivity";
+    static  final int requestCapture = 1;
     Switch switchToggle;
-    ImageButton imageViewButton;
+    ImageButton cameraBtn;
     CheckBox checkBox;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        Log.i(ACTIVITY_NAME,"onCreate()");
-        imageViewButton =  findViewById(R.id.imageButton);
-        switchToggle = findViewById(R.id.switch1);
+        setContentView(R.layout.activity_list_items);
+        cameraBtn =  findViewById(R.id.cameraButton);
+        switchToggle = findViewById(R.id.switch_toggle);
         checkBox = findViewById(R.id.Checkbox);
 
-        imageViewButton.setOnClickListener(new View.OnClickListener() {
+        Log.i(ACTIVITY_NAME,"onCreate()");
+
+        cameraBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
         Intent cameraIntent  = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
             if (cameraIntent.resolveActivity(getPackageManager()) != null){
-                startActivityForResult(cameraIntent, captureRequested);
+                startActivityForResult(cameraIntent, requestCapture);
             }
             }
         });

@@ -25,7 +25,7 @@
         android:text="@string/CheckBox" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/switch_toggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
@@ -33,7 +33,7 @@
         android:text="@string/Switch" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/cameraButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_column="1"

@@ -9,16 +9,16 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class StartActivity extends Activity {
-    protected static final String ACTIVITY_NAME = "LoginActivity";
+    protected static final String ACTIVITY_NAME = "StartActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         Log.i(ACTIVITY_NAME,"onCreate()");
-        Button startActivityButton = findViewById(R.id.btnStartActivity);
+        Button startActivityBtn = findViewById(R.id.startActivityBtn);
 
-        startActivityButton.setOnClickListener(new View.OnClickListener() {
+        startActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(StartActivity.this, ListItemsActivity.class);
@@ -58,7 +58,8 @@ public class StartActivity extends Activity {
         if (requestCode == Activity.RESULT_OK){
             Log.i(ACTIVITY_NAME, "Returned message OK");
         }
-        String messagePassed = data.getStringExtra("Response");
+        String messagePassed;
+        messagePassed = data.getStringExtra("Response");
         Toast toastOK = Toast.makeText(this, messagePassed, Toast.LENGTH_SHORT);
         toastOK.show();
     }

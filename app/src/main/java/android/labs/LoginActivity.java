@@ -71,6 +71,7 @@ public class LoginActivity extends Activity {
         String savedUserName = email.getText().toString();
 
         sharedP.edit().putString(MAIL, savedUserName);
+        //SharedPreferences.Editor editor = sharedP.edit().putString(MAIL, savedUserName);
         sharedP.edit().commit();
     }
 }
