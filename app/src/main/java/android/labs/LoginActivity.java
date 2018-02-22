@@ -16,6 +16,7 @@ public class LoginActivity extends Activity {
     EditText email;
     SharedPreferences sharedP;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

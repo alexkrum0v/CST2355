@@ -17,12 +17,24 @@ public class StartActivity extends Activity {
         setContentView(R.layout.activity_start);
         Log.i(ACTIVITY_NAME,"onCreate()");
         Button startActivityBtn = findViewById(R.id.startActivityBtn);
+        Button startChtButton = findViewById(R.id.chatBtn);
 
         startActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(StartActivity.this, ListItemsActivity.class);
                 startActivityForResult(startIntent, 50);
+            }
+        });
+
+        startChtButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+                Intent chatIntent;
+                chatIntent = new Intent(StartActivity.this, ChatWindow.class);
+                startActivity(chatIntent);
+
             }
         });
     }

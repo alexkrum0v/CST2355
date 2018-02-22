@@ -15,6 +15,9 @@
     <string name = "ok">OK!</string>
     <string name = "cancel">Отмени</string>
     <string name="response">Моята информация за споделяне</string>
-
-
+    <string name="startChat">Започни чат</string>
+    <string name="row_outgoing">изходящо съобщение</string>
+    <string name="row_incoming">входящо съобщение</string>
+    <string name="user_outgoing">потребител1</string>
+    <string name="user_incoming">потребител2</string>
 </resources>

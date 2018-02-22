@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab2</string>
+    <string name="app_name">Lab4</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\’m a button</string>
     <string name="login"> Login</string>
@@ -9,10 +9,15 @@
     <string name="CheckBox">Check Box</string>
     <string name="Switch">What does this button do?</string>
     <string name="flagDescription">flag</string>
-    <string name ="dialogMessage">Press OK if you are done</string>
-    <string name = "dialogTitle">Exit application. Are you sure?</string>
-    <string name = "ok">OK!</string>
-    <string name = "cancel">Cancel</string>
+    <string name="dialogMessage">Press OK if you are done</string>
+    <string name="dialogTitle">Exit application. Are you sure?</string>
+    <string name="ok">OK!</string>
+    <string name="cancel">Cancel</string>
     <string name="response">My information to share</string>
-
+    <string name="startChat">"Start chat"</string>
+    <string name="sendMsg">Send</string>
+    <string name="row_outgoing">outgoing message</string>
+    <string name="row_incoming">incoming message</string>
+    <string name="user_outgoing">user1</string>
+    <string name="user_incoming">user2</string>
 </resources>
