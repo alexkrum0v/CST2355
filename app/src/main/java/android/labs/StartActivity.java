@@ -15,9 +15,10 @@ public class StartActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        Log.i(ACTIVITY_NAME,"onCreate()");
+        Log.i(ACTIVITY_NAME, "onCreate()");
         Button startActivityBtn = findViewById(R.id.startActivityBtn);
         Button startChtButton = findViewById(R.id.chatBtn);
+        Button weatherButton = findViewById(R.id.weatherBtn);
 
         startActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,40 +35,54 @@ public class StartActivity extends Activity {
                 Intent chatIntent;
                 chatIntent = new Intent(StartActivity.this, ChatWindow.class);
                 startActivity(chatIntent);
+            }
+        });
 
+        weatherButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(ACTIVITY_NAME, "User clicked on Weather button");
+                Intent weatherIntent = new Intent(StartActivity.this, WeatherActivity.class);
+                startActivity(weatherIntent);
             }
         });
     }
+
     @Override
-    public void onResume(){
+    public void onResume() {
         super.onResume();
         Log.i(ACTIVITY_NAME, "onResume()");
     }
+
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
         Log.i(ACTIVITY_NAME, "onStart()");
     }
+
     @Override
-    public void onPause(){
+    public void onPause() {
         super.onPause();
         Log.i(ACTIVITY_NAME, "onPause()");
     }
+
     @Override
-    public void onStop(){
+    public void onStop() {
         super.onStop();
         Log.i(ACTIVITY_NAME, "onStop()");
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
         Log.i(ACTIVITY_NAME, "onDestroy()");
     }
-    public  void onActivityResult(int requestCode, int responseCode, Intent data){
-        if (requestCode == 50){
+
+    public void onActivityResult(int requestCode, int responseCode, Intent data) {
+        if (requestCode == 50) {
             Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
         }
-        if (requestCode == Activity.RESULT_OK){
+        if (requestCode == Activity.RESULT_OK) {
             Log.i(ACTIVITY_NAME, "Returned message OK");
         }
         String messagePassed;

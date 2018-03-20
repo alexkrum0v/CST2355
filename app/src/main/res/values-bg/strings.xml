@@ -18,6 +18,12 @@
     <string name="startChat">Започни чат</string>
     <string name="row_outgoing">изходящо съобщение</string>
     <string name="row_incoming">входящо съобщение</string>
-    <string name="user_outgoing">потребител1</string>
-    <string name="user_incoming">потребител2</string>
+    <string name="user_outgoing">Потребител1</string>
+    <string name="user_incoming">Потребител2</string>
+    <string name="showWeather">Времето</string>
+    <string name="WeatherLook">Картинка</string>
+    <string name="currentTemp"> В момента</string>
+    <string name="minTemp"> Минимална теампература</string>
+    <string name="maxTemp"> Максимална температура</string>
+    <string name="wind"> Вятър</string>
 </resources>

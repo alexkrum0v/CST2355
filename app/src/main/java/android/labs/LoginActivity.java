@@ -33,7 +33,8 @@ public class LoginActivity extends Activity {
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick
+                    (View v) {
                 saveEmail();
                 Intent intent = new Intent(LoginActivity.this, StartActivity.class);
                 startActivity(intent);

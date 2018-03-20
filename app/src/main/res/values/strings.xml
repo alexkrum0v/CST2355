@@ -18,6 +18,13 @@
     <string name="sendMsg">Send</string>
     <string name="row_outgoing">outgoing message</string>
     <string name="row_incoming">incoming message</string>
-    <string name="user_outgoing">user1</string>
-    <string name="user_incoming">user2</string>
+    <string name="user_outgoing">User1</string>
+    <string name="user_incoming">User2</string>
+    <string name="showWeather">Weather</string>
+    <string name="WeatherLook">Weather visual</string>
+    <string name="currentTemp"> Current</string>
+    <string name="minTemp"> Low</string>
+    <string name="maxTemp"> High</string>
+    <string name="wind"> Wind speed</string>
+
 </resources>

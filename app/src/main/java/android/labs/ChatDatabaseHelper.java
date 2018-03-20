@@ -9,7 +9,6 @@ import android.util.Log;
  * Created by Aleksandar Krumov on 2018-02-22.
  */
 
-@SuppressWarnings("DefaultFileTemplate")
 public class ChatDatabaseHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "Messages.db";
@@ -36,7 +35,7 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
         Log.i("ChatDatabaseHelper", "Calling onUpgrade, oldVersion=" + oldVer + " newVersion=" + newVer);
     }
 
-    public void onDowngrade(SQLiteDatabase db, int oldVer, int newVer) // newVer > oldVer
+    public void onDowngrade(SQLiteDatabase db, int oldVer, int newVer) // newVer < oldVer
     {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME); //delete any existing data
         onCreate(db);
